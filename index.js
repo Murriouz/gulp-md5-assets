@@ -40,7 +40,7 @@ module.exports = function (size, ifile) {
             })
         })
 
-        file.path = path.join(dir, md5_filename);
+        file.path = path.join(dir, filename);
 
         this.push(file);
         cb();
