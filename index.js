@@ -35,7 +35,13 @@ module.exports = function (size, ifile) {
         ifile && glob(ifile,function(err, files){
             if(err) return console.log(err);
             files.forEach(function(ilist){
-              var result = fs.readFileSync(ilist,'utf8').replace(new RegExp(escapeRegExp(sub_namepath + filename) + '\??' + '[a-fA-F0-9]*', "g"), sub_namepath + md5_filename);
+              // var regexp = new RegExp(escapeRegExp(sub_namepath + filename) + '\??[a-fA-F0-9]*', "g");
+              // console.log(regexp);
+              var filecontent = fs.readFileSync(ilist, "utf8");
+              var list = filecontent.split(filename + '?');
+              if (list.length <= 1) list = filecontent.split(filename);
+              var result = list.join(md5_filename);
+              // var result = fs.readFileSync(ilist,'utf8').replace(regexp, sub_namepath + md5_filename);
                 fs.writeFileSync(ilist, result, 'utf8');
             })
         })
