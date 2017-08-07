@@ -1,8 +1,8 @@
 # gulp-md5-assets
 
-This is a fork of [gulp-md5-plus](https://github.com/wpfpizicai/gulp-md5-plus)
+This is a fork of [gulp-md5-assets](https://github.com/stipsan/gulp-md5-assets)
 
-The difference between this fork and the original is the result:
+The difference between gulp-md5-plus and gulp-md5-assets is the result:
 ```html
 	Sample from a index.html file before transformation:
 	<link rel="stylesheet" type="text/css" href="main.css">
@@ -11,6 +11,8 @@ The difference between this fork and the original is the result:
 	gulp-md5-assets
 	<link rel="stylesheet" type="text/css" href="main.css?afd9d92ebe">
 ```
+
+But gulp-md5-assets will cause ```main.css?afd9d92ebe``` saved on disk. This fork just save ```main.css``` for the ease to upload static files to server.
 
 ## Usage
 
