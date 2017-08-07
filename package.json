@@ -1,6 +1,6 @@
 {
   "name": "gulp-md5-statics",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "md5 the static file and change the names in the quoted html, forked from gulp-md5-assets ",
   "main": "index.js",
   "scripts": {
